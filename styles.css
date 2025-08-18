@@ -1,0 +1,506 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* ESTRUCTURA BASE */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body.default-bg {
+    background: linear-gradient(135deg, ***REMOVED***f5f7fa 0%, ***REMOVED***c3cfe2 100%);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+    width: 100%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin: 20px auto;
+}
+
+/* FONDOS CLIMÁTICOS */
+/* 1. DÍA DESPEJADO */
+body.clear-day {
+    background: url('https://images.unsplash.com/photo-1469122312224-c5846569feb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+}
+
+/* 2. NOCHE DESPEJADA */
+body.clear-night {
+    background: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+    color: ***REMOVED***fff;
+}
+
+/* 3. NUBLADO */
+body.clouds {
+    background: url('https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?q=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+}
+
+/* 4. LLUVIA INTENSA */
+body.rain {
+    background: url('https://images.unsplash.com/photo-1508081317905-6dd972f752dd?q=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+    color: ***REMOVED***fff;
+}
+
+/* 5. LLOVIZNA */
+body.drizzle {
+    background: url('https://images.unsplash.com/photo-1576234699886-7eb7f11aecb7?q=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+}
+
+/* 6. NIEVE */
+body.snow {
+    background: url('https://images.unsplash.com/photo-1477601263568-180e2c6d046e?q=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+}
+
+/* 7. TORMENTA ELÉCTRICA */
+body.thunderstorm {
+    background: url('https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28?q=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+    color: ***REMOVED***fff;
+}
+
+/* 8. NIEBLA/BRUMA */
+body.mist, body.fog, body.haze {
+    background: url('https://images.unsplash.com/photo-1673776784151-55c375fc6fe3?q=80&w=1032&auto=format&fit=crop&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+    color: ***REMOVED***fff;
+}
+
+/* AJUSTES PARA FONDOS OSCUROS */
+body.thunderstorm .container,
+body.rain .container,
+body.mist .container,
+body.clear-night .container {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+/* COMPONENTES */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: ***REMOVED***333;
+}
+
+.search-container {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+***REMOVED***city-input {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+***REMOVED***search-btn, ***REMOVED***location-btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: ***REMOVED***4a6bff;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+***REMOVED***search-btn:hover, ***REMOVED***location-btn:hover {
+    background: ***REMOVED***3a5bef;
+    transform: translateY(-2px);
+}
+
+.unit-toggle {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+***REMOVED***toggle-unit {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    background: ***REMOVED***4a6bff;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+***REMOVED***toggle-unit:hover {
+    background: ***REMOVED***3a5bef;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.current-weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.weather-info {
+    flex: 1;
+}
+
+.weather-icon {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+
+.weather-icon img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+***REMOVED***city-name {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.temp-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+***REMOVED***temperature {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+***REMOVED***temp-unit {
+    font-size: 1.5rem;
+    margin-left: 5px;
+}
+
+***REMOVED***weather-description {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.details {
+    display: flex;
+    gap: 20px;
+    font-size: 1rem;
+}
+
+.details i {
+    margin-right: 5px;
+}
+
+.forecast {
+    margin-top: 30px;
+}
+
+.forecast h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.forecast-days {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.forecast-day {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-day h4 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.forecast-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 10px;
+}
+
+.forecast-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.forecast-temp {
+    font-size: 0.9rem;
+}
+
+/* ALERTAS */
+***REMOVED***custom-alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 25px;
+    background-color: ***REMOVED***ff6b6b;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: none;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* LOADING */
+.weather-card.loading {
+    opacity: 0.8;
+}
+
+.weather-card.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 4px solid ***REMOVED***f3f3f3;
+    border-top: 4px solid ***REMOVED***4a6bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* TEXTO EN FONDOS OSCUROS */
+body.clear-night .forecast-day h4,
+body.thunderstorm .forecast-day h4,
+body.rain .forecast-day h4,
+body.mist .forecast-day h4 {
+    color: ***REMOVED***ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .current-weather {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .weather-icon {
+        margin: 15px 0;
+    }
+    
+    .forecast-days {
+        flex-direction: column;
+    }
+    
+    .forecast-day {
+        margin-bottom: 15px;
+    }
+    
+    ***REMOVED***city-input {
+        padding: 10px 15px;
+    }
+}
+
+/* Técnicas para mejorar la legibilidad del texto */
+.container {
+    position: relative;
+}
+
+/* Efecto de capa semi-transparente detrás del contenido */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    z-index: -1;
+}
+
+/* Ajustes para texto en fondos oscuros */
+body.clear-night .container::before,
+body.thunderstorm .container::before,
+body.rain .container::before,
+body.mist .container::before {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Sombra de texto para mejor contraste */
+h1, h2, h3, h4, 
+***REMOVED***city-name, ***REMOVED***temperature, 
+***REMOVED***weather-description, 
+.forecast-day, 
+.details div {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajustes específicos para fondos oscuros */
+body.clear-night h1,
+body.thunderstorm h1,
+body.rain h1,
+body.mist h1,
+body.clear-night h2,
+body.thunderstorm h2,
+body.rain h2,
+body.mist h2,
+body.clear-night h3,
+body.thunderstorm h3,
+body.rain h3,
+body.mist h3,
+body.clear-night ***REMOVED***city-name,
+body.thunderstorm ***REMOVED***city-name,
+body.rain ***REMOVED***city-name,
+body.mist ***REMOVED***city-name,
+body.clear-night ***REMOVED***temperature,
+body.thunderstorm ***REMOVED***temperature,
+body.rain ***REMOVED***temperature,
+body.mist ***REMOVED***temperature,
+body.clear-night ***REMOVED***weather-description,
+body.thunderstorm ***REMOVED***weather-description,
+body.rain ***REMOVED***weather-description,
+body.mist ***REMOVED***weather-description,
+body.clear-night .details div,
+body.thunderstorm .details div,
+body.rain .details div,
+body.mist .details div {
+    color: ***REMOVED***ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Contorno para íconos en fondos claros/oscuros */
+.weather-icon img,
+.forecast-icon img {
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
+}
+
+body.clear-night .weather-icon img,
+body.thunderstorm .weather-icon img,
+body.rain .weather-icon img,
+body.mist .weather-icon img,
+body.clear-night .forecast-icon img,
+body.thunderstorm .forecast-icon img,
+body.rain .forecast-icon img,
+body.mist .forecast-icon img {
+    filter: drop-shadow(0 1px 3px rgba(255, 255, 255, 0.3));
+}
+
+/* Mejoras en los botones para fondos oscuros */
+body.clear-night ***REMOVED***search-btn,
+body.thunderstorm ***REMOVED***search-btn,
+body.rain ***REMOVED***search-btn,
+body.mist ***REMOVED***search-btn,
+body.clear-night ***REMOVED***location-btn,
+body.thunderstorm ***REMOVED***location-btn,
+body.rain ***REMOVED***location-btn,
+body.mist ***REMOVED***location-btn,
+body.clear-night ***REMOVED***toggle-unit,
+body.thunderstorm ***REMOVED***toggle-unit,
+body.rain ***REMOVED***toggle-unit,
+body.mist ***REMOVED***toggle-unit {
+    background: rgba(255, 255, 255, 0.9);
+    color: ***REMOVED***4a6bff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.clear-night ***REMOVED***search-btn:hover,
+body.thunderstorm ***REMOVED***search-btn:hover,
+body.rain ***REMOVED***search-btn:hover,
+body.mist ***REMOVED***search-btn:hover,
+body.clear-night ***REMOVED***location-btn:hover,
+body.thunderstorm ***REMOVED***location-btn:hover,
+body.rain ***REMOVED***location-btn:hover,
+body.mist ***REMOVED***location-btn:hover,
+body.clear-night ***REMOVED***toggle-unit:hover,
+body.thunderstorm ***REMOVED***toggle-unit:hover,
+body.rain ***REMOVED***toggle-unit:hover,
+body.mist ***REMOVED***toggle-unit:hover {
+    background: white;
+}
+
+/* Mejoras en el input de búsqueda */
+body.clear-night ***REMOVED***city-input,
+body.thunderstorm ***REMOVED***city-input,
+body.rain ***REMOVED***city-input,
+body.mist ***REMOVED***city-input {
+    background: rgba(255, 255, 255, 0.9);
+    color: ***REMOVED***333;
+}
+
+/* Tarjetas de pronóstico en fondos oscuros */
+body.clear-night .forecast-day,
+body.thunderstorm .forecast-day,
+body.rain .forecast-day,
+body.mist .forecast-day {
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+/* Ajuste de opacidad para mejor legibilidad */
+.weather-card {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+body.clear-night .weather-card,
+body.thunderstorm .weather-card,
+body.rain .weather-card,
+body.mist .weather-card {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Mejora de contraste para la alerta */
+***REMOVED***custom-alert {
+    background-color: rgba(255, 107, 107, 0.95);
+    font-weight: bold;
+    text-shadow: none;
+}
