@@ -40,7 +40,7 @@ Aplicación del clima moderna y responsive que muestra condiciones actuales y pr
 1. Cloná el repositorio:
 
 ```bash
-git clone https://github.com/AngelBerretta/CoffeeCraft.git
+git clone https://github.com/AngelBerretta/appweather.git
 ```
 
 2. Abrí `index.html` en tu navegador.
