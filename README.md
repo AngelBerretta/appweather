@@ -4,7 +4,7 @@ Aplicación del clima moderna y responsive que muestra condiciones actuales y pr
 
 ---
 
-***REMOVED******REMOVED*** ✨ Características principales 
+## ✨ Características principales 
 
 🌍 Busca el clima por ciudad o usando tu ubicación geográfica
 
@@ -22,7 +22,7 @@ Aplicación del clima moderna y responsive que muestra condiciones actuales y pr
 
 ---
 
-***REMOVED******REMOVED*** 🛠️ Tecnologías utilizadas 
+## 🛠️ Tecnologías utilizadas 
 
 - HTML5
 
@@ -36,7 +36,7 @@ Aplicación del clima moderna y responsive que muestra condiciones actuales y pr
 
 ---
 
-***REMOVED******REMOVED*** 🚀 Cómo usar 
+## 🚀 Cómo usar 
 1. Cloná el repositorio:
 
 ```bash
@@ -47,7 +47,7 @@ git clone https://github.com/AngelBerretta/appweather.git
 
 ---
 
-***REMOVED******REMOVED*** 🔮 Mejoras futuras 
+## 🔮 Mejoras futuras 
 Añadir gráficos de temperatura por horas
 
 Implementar modo oscuro manual
@@ -56,7 +56,7 @@ Añadir más indicadores climáticos (presión, UV, etc.)
 
 Guardar historial de búsquedas recientes
 
-***REMOVED******REMOVED*** 📄 Licencia
+## 📄 Licencia
 
 MIT License © Angel Gabriel Berretta.
 

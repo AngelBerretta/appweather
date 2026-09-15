@@ -20,7 +20,7 @@ body {
 }
 
 body.default-bg {
-    background: linear-gradient(135deg, ***REMOVED***f5f7fa 0%, ***REMOVED***c3cfe2 100%);
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 /* CONTENEDOR PRINCIPAL */
@@ -44,7 +44,7 @@ body.clear-day {
 /* 2. NOCHE DESPEJADA */
 body.clear-night {
     background: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
-    color: ***REMOVED***fff;
+    color: #fff;
 }
 
 /* 3. NUBLADO */
@@ -55,7 +55,7 @@ body.clouds {
 /* 4. LLUVIA INTENSA */
 body.rain {
     background: url('https://images.unsplash.com/photo-1508081317905-6dd972f752dd?q=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
-    color: ***REMOVED***fff;
+    color: #fff;
 }
 
 /* 5. LLOVIZNA */
@@ -71,13 +71,13 @@ body.snow {
 /* 7. TORMENTA ELÉCTRICA */
 body.thunderstorm {
     background: url('https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28?q=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
-    color: ***REMOVED***fff;
+    color: #fff;
 }
 
 /* 8. NIEBLA/BRUMA */
 body.mist, body.fog, body.haze {
     background: url('https://images.unsplash.com/photo-1673776784151-55c375fc6fe3?q=80&w=1032&auto=format&fit=crop&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
-    color: ***REMOVED***fff;
+    color: #fff;
 }
 
 /* AJUSTES PARA FONDOS OSCUROS */
@@ -93,7 +93,7 @@ body.clear-night .container {
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: ***REMOVED***333;
+    color: #333;
 }
 
 .search-container {
@@ -102,7 +102,7 @@ h1 {
     gap: 10px;
 }
 
-***REMOVED***city-input {
+#city-input {
     flex: 1;
     padding: 12px 20px;
     border: none;
@@ -112,20 +112,20 @@ h1 {
     outline: none;
 }
 
-***REMOVED***search-btn, ***REMOVED***location-btn {
+#search-btn, #location-btn {
     width: 50px;
     height: 50px;
     border: none;
     border-radius: 50%;
-    background: ***REMOVED***4a6bff;
+    background: #4a6bff;
     color: white;
     font-size: 1.2rem;
     cursor: pointer;
     transition: all 0.3s;
 }
 
-***REMOVED***search-btn:hover, ***REMOVED***location-btn:hover {
-    background: ***REMOVED***3a5bef;
+#search-btn:hover, #location-btn:hover {
+    background: #3a5bef;
     transform: translateY(-2px);
 }
 
@@ -134,19 +134,19 @@ h1 {
     margin-bottom: 15px;
 }
 
-***REMOVED***toggle-unit {
+#toggle-unit {
     padding: 8px 20px;
     border: none;
     border-radius: 20px;
-    background: ***REMOVED***4a6bff;
+    background: #4a6bff;
     color: white;
     cursor: pointer;
     font-size: 0.9rem;
     transition: all 0.3s;
 }
 
-***REMOVED***toggle-unit:hover {
-    background: ***REMOVED***3a5bef;
+#toggle-unit:hover {
+    background: #3a5bef;
 }
 
 .weather-card {
@@ -191,7 +191,7 @@ h1 {
     to { opacity: 1; transform: scale(1); }
 }
 
-***REMOVED***city-name {
+#city-name {
     font-size: 1.8rem;
     margin-bottom: 10px;
 }
@@ -202,17 +202,17 @@ h1 {
     margin-bottom: 10px;
 }
 
-***REMOVED***temperature {
+#temperature {
     font-size: 3rem;
     font-weight: bold;
 }
 
-***REMOVED***temp-unit {
+#temp-unit {
     font-size: 1.5rem;
     margin-left: 5px;
 }
 
-***REMOVED***weather-description {
+#weather-description {
     font-size: 1.2rem;
     margin-bottom: 15px;
     text-transform: capitalize;
@@ -273,13 +273,13 @@ h1 {
 }
 
 /* ALERTAS */
-***REMOVED***custom-alert {
+#custom-alert {
     position: fixed;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
     padding: 15px 25px;
-    background-color: ***REMOVED***ff6b6b;
+    background-color: #ff6b6b;
     color: white;
     border-radius: 5px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
@@ -301,8 +301,8 @@ h1 {
     transform: translate(-50%, -50%);
     width: 40px;
     height: 40px;
-    border: 4px solid ***REMOVED***f3f3f3;
-    border-top: 4px solid ***REMOVED***4a6bff;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #4a6bff;
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
@@ -317,7 +317,7 @@ body.clear-night .forecast-day h4,
 body.thunderstorm .forecast-day h4,
 body.rain .forecast-day h4,
 body.mist .forecast-day h4 {
-    color: ***REMOVED***ffffff;
+    color: #ffffff;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -345,7 +345,7 @@ body.mist .forecast-day h4 {
         margin-bottom: 15px;
     }
     
-    ***REMOVED***city-input {
+    #city-input {
         padding: 10px 15px;
     }
 }
@@ -378,8 +378,8 @@ body.mist .container::before {
 
 /* Sombra de texto para mejor contraste */
 h1, h2, h3, h4, 
-***REMOVED***city-name, ***REMOVED***temperature, 
-***REMOVED***weather-description, 
+#city-name, #temperature, 
+#weather-description, 
 .forecast-day, 
 .details div {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -398,23 +398,23 @@ body.clear-night h3,
 body.thunderstorm h3,
 body.rain h3,
 body.mist h3,
-body.clear-night ***REMOVED***city-name,
-body.thunderstorm ***REMOVED***city-name,
-body.rain ***REMOVED***city-name,
-body.mist ***REMOVED***city-name,
-body.clear-night ***REMOVED***temperature,
-body.thunderstorm ***REMOVED***temperature,
-body.rain ***REMOVED***temperature,
-body.mist ***REMOVED***temperature,
-body.clear-night ***REMOVED***weather-description,
-body.thunderstorm ***REMOVED***weather-description,
-body.rain ***REMOVED***weather-description,
-body.mist ***REMOVED***weather-description,
+body.clear-night #city-name,
+body.thunderstorm #city-name,
+body.rain #city-name,
+body.mist #city-name,
+body.clear-night #temperature,
+body.thunderstorm #temperature,
+body.rain #temperature,
+body.mist #temperature,
+body.clear-night #weather-description,
+body.thunderstorm #weather-description,
+body.rain #weather-description,
+body.mist #weather-description,
 body.clear-night .details div,
 body.thunderstorm .details div,
 body.rain .details div,
 body.mist .details div {
-    color: ***REMOVED***ffffff;
+    color: #ffffff;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -436,45 +436,45 @@ body.mist .forecast-icon img {
 }
 
 /* Mejoras en los botones para fondos oscuros */
-body.clear-night ***REMOVED***search-btn,
-body.thunderstorm ***REMOVED***search-btn,
-body.rain ***REMOVED***search-btn,
-body.mist ***REMOVED***search-btn,
-body.clear-night ***REMOVED***location-btn,
-body.thunderstorm ***REMOVED***location-btn,
-body.rain ***REMOVED***location-btn,
-body.mist ***REMOVED***location-btn,
-body.clear-night ***REMOVED***toggle-unit,
-body.thunderstorm ***REMOVED***toggle-unit,
-body.rain ***REMOVED***toggle-unit,
-body.mist ***REMOVED***toggle-unit {
+body.clear-night #search-btn,
+body.thunderstorm #search-btn,
+body.rain #search-btn,
+body.mist #search-btn,
+body.clear-night #location-btn,
+body.thunderstorm #location-btn,
+body.rain #location-btn,
+body.mist #location-btn,
+body.clear-night #toggle-unit,
+body.thunderstorm #toggle-unit,
+body.rain #toggle-unit,
+body.mist #toggle-unit {
     background: rgba(255, 255, 255, 0.9);
-    color: ***REMOVED***4a6bff;
+    color: #4a6bff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-body.clear-night ***REMOVED***search-btn:hover,
-body.thunderstorm ***REMOVED***search-btn:hover,
-body.rain ***REMOVED***search-btn:hover,
-body.mist ***REMOVED***search-btn:hover,
-body.clear-night ***REMOVED***location-btn:hover,
-body.thunderstorm ***REMOVED***location-btn:hover,
-body.rain ***REMOVED***location-btn:hover,
-body.mist ***REMOVED***location-btn:hover,
-body.clear-night ***REMOVED***toggle-unit:hover,
-body.thunderstorm ***REMOVED***toggle-unit:hover,
-body.rain ***REMOVED***toggle-unit:hover,
-body.mist ***REMOVED***toggle-unit:hover {
+body.clear-night #search-btn:hover,
+body.thunderstorm #search-btn:hover,
+body.rain #search-btn:hover,
+body.mist #search-btn:hover,
+body.clear-night #location-btn:hover,
+body.thunderstorm #location-btn:hover,
+body.rain #location-btn:hover,
+body.mist #location-btn:hover,
+body.clear-night #toggle-unit:hover,
+body.thunderstorm #toggle-unit:hover,
+body.rain #toggle-unit:hover,
+body.mist #toggle-unit:hover {
     background: white;
 }
 
 /* Mejoras en el input de búsqueda */
-body.clear-night ***REMOVED***city-input,
-body.thunderstorm ***REMOVED***city-input,
-body.rain ***REMOVED***city-input,
-body.mist ***REMOVED***city-input {
+body.clear-night #city-input,
+body.thunderstorm #city-input,
+body.rain #city-input,
+body.mist #city-input {
     background: rgba(255, 255, 255, 0.9);
-    color: ***REMOVED***333;
+    color: #333;
 }
 
 /* Tarjetas de pronóstico en fondos oscuros */
@@ -499,7 +499,7 @@ body.mist .weather-card {
 }
 
 /* Mejora de contraste para la alerta */
-***REMOVED***custom-alert {
+#custom-alert {
     background-color: rgba(255, 107, 107, 0.95);
     font-weight: bold;
     text-shadow: none;
